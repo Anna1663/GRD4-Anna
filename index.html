@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>暖心宠物领养平台</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft Yahei", sans-serif;
+        }
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        /*导航栏*/
+        nav {
+            background-color: #508991;
+            padding: 1rem 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 28px;
+            font-size:16px;
+        }
+        /*头部横幅banner*/
+        .banner {
+            height: 420px;
+            background: url("tupian/banner.png") center/cover no-repeat;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            padding-left:8%;
+            color:white;
+            background-color:rgba(0,0,0,0.35);
+            background-blend-mode: darken;
+        }
+        .banner h1{
+            font-size:42px;
+            margin-bottom:16px;
+        }
+        .banner p{
+            font-size:18px;
+            margin-bottom:24px;
+        }
+        .banner button{
+            width:160px;
+            padding:12px;
+            border:none;
+            border-radius:8px;
+            background:#e07a5f;
+            color:white;
+            font-size:16px;
+            cursor:pointer;
+        }
+        /*宠物板块*/
+        .section-title{
+            text-align:center;
+            margin:50px 0 30px;
+            font-size:28px;
+            color:#222;
+        }
+        .pet-container{
+            width:85%;
+            margin:0 auto;
+            display:grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap:28px;
+            margin-bottom:60px;
+        }
+        .pet-card{
+            background:white;
+            border-radius:12px;
+            overflow:hidden;
+            box-shadow:0 2px 10px #ddd;
+        }
+        .pet-card img{
+            width:100%;
+            height:240px;
+            object-fit:cover;
+        }
+        .pet-info{
+            padding:18px;
+        }
+        .pet-info h3{
+            margin-bottom:8px;
+        }
+        .pet-info p{
+            color:#666;
+            line-height:1.6;
+        }
+        .pet-info button{
+            margin-top:14px;
+            width:100%;
+            padding:10px;
+            border:none;
+            background:#508991;
+            color:white;
+            border-radius:6px;
+            cursor:pointer;
+        }
+        /*领养须知*/
+        .rules{
+            width:85%;
+            margin:0 auto 60px;
+            background:white;
+            padding:30px;
+            border-radius:12px;
+        }
+        .rules h2{
+            margin-bottom:16px;
+        }
+        .rules li{
+            line-height:1.8;
+            margin-left:20px;
+            color:#444;
+        }
+        /*领养申请表*/
+        .apply-form{
+            width:85%;
+            margin:0 auto 60px;
+            background:white;
+            padding:30px;
+            border-radius:12px;
+        }
+        .apply-form h2{
+            margin-bottom:20px;
+        }
+        .form-item{
+            margin-bottom:18px;
+        }
+        .form-item label{
+            display:block;
+            margin-bottom:6px;
+        }
+        .form-item input, .form-item textarea{
+            width:100%;
+            padding:10px;
+            border:1px solid #ccc;
+            border-radius:6px;
+        }
+        .submit-btn{
+            padding:12px 30px;
+            background:#508991;
+            color:white;
+            border:none;
+            border-radius:6px;
+            font-size:16px;
+            cursor:pointer;
+        }
+        /*页脚*/
+        footer{
+            background:#2d3142;
+            color:white;
+            text-align:center;
+            padding:25px;
+        }
+    </style>
+</head>
+<body>
+    <!--导航栏-->
+    <nav>
+        <div class="logo">暖心宠物领养</div>
+        <div class="nav-links">
+            <a href=" ">首页</a >
+            <a href="#pets">待领养宠物</a >
+            <a href="#rules">领养须知</a >
+            <a href="#apply">领养申请</a >
+        </div>
+    </nav>
+
+    <!--横幅区域-->
+    <section class="banner" id="home">
+        <h1>以领养代替购买</h1>
+        <p>给流浪的毛孩子一个温暖的家</p >
+        <button>立即申请领养</button>
+    </section>
+
+    <!--待领养宠物卡片-->
+    <h2 class="section-title">等待新家的小可爱</h2>
+    <section class="pet-container" id="pets">
+        <div class="pet-card">
+            <img src="tupian/cat1.jpg" alt="橘猫">
+            <div class="pet-info">
+                <h3>橘子｜2岁 公猫</h3>
+                <p>性格温顺亲人，已绝育、疫苗齐全，喜欢贴贴</p >
+                <button>查看详情</button>
+            </div>
+        </div>
+        <div class="pet-card">
+            <img src="tupian/dog1.jpg" alt="小狗">
+            <div class="pet-info">
+                <h3>阿柴｜1岁 母犬</h3>
+                <p>活泼乖巧，学会定点上厕所，适合有阳台家庭</p >
+                <button>查看详情</button>
+            </div>
+        </div>
+        <div class="pet-card">
+            <img src="tupian/cat2.jpg" alt="奶牛猫">
+            <div class="pet-info">
+                <h3>墨墨｜1岁半 母猫</h3>
+                <p>安静胆小，不爱吵闹，适合独居上班族</p >
+                <button>查看详情</button>
+            </div>
+        </div>
+    </section>
+
+    <!--领养须知-->
+    <section class="rules" id="rules">
+        <h2>📋 领养须知</h2>
+        <ul>
+            <li>有稳定收入、固定住所，不租禁止养宠物的房子</li>
+            <li>同意定期回访，不弃养、不转送宠物</li>
+            <li>科学喂养，按时疫苗、驱虫，生病及时就医</li>
+            <li>适龄宠物必须绝育，杜绝无序繁殖</li>
+        </ul>
+    </section>
+
+    <!--领养申请表单-->
+    <section class="apply-form" id="apply">
+        <h2>📝 领养申请表</h2>
+        <div class="form-item">
+            <label>姓名</label>
+            <input type="text" placeholder="请输入您的姓名">
+        </div>
+        <div class="form-item">
+            <label>联系电话</label>
+            <input type="tel" placeholder="请输入手机号">
+        </div>
+        <div class="form-item">
+            <label>意向领养宠物</label>
+            <input type="text" placeholder="例如：橘子">
+        </div>
+        <div class="form-item">
+            <label>居住情况</label>
+            <textarea rows="3" placeholder="自有房/租房，是否阳台封闭"></textarea>
+        </div>
+        <button class="submit-btn">提交申请</button>
+    </section>
+
+    <!--页脚-->
+    <footer>
+        <p>暖心宠物领养平台 © 2026 | 联系方式：pet@adopt.com</p >
+    </footer>
+</body>
+</html>
